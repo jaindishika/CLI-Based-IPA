@@ -7,6 +7,5 @@ public class GoogleDriveStorageStrategy implements CloudStorageStrategy {
     public void storeFile(String path, String content) {
         // Simulate storing file to Google Drive
         Logger.getInstance().log("Storing file to Google Drive at path: " + path);
-        System.out.println("File stored to Google Drive at path: " + path);
     }
 }

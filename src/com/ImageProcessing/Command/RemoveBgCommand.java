@@ -14,8 +14,6 @@ public class RemoveBgCommand implements Command{
 
     @Override
     public void execute() {
-        Logger.getInstance().log("Background Removal operation: ImagePath = " + imagePath);
         backgroundRemovalService.removeBackground(imagePath);
-        System.out.println("Background Removal operation completed for ImagePath = " + imagePath);
     }
 }

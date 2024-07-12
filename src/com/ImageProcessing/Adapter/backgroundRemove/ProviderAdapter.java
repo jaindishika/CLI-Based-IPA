@@ -12,6 +12,6 @@ public class ProviderAdapter implements BackgroundRemovalService{
     @Override
     public void removeBackground(String imagePath) {
         provider.removeBackground(imagePath);
-        Logger.getInstance().log("Background removal using Provider A is completed for imagePath: " + imagePath);
+//        Logger.getInstance().log("Background removal using Provider A is completed for imagePath: " + imagePath);
     }
 }

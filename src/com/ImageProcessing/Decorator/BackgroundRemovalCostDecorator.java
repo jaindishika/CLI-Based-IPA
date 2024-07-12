@@ -8,13 +8,12 @@ public class BackgroundRemovalCostDecorator extends CostDecorator {
     }
 
     @Override
-    public void execute() {
-        super.execute();
-        Logger.getInstance().log("Additional cost for Background Removal added.");
+    public double cost() {
+        return operation.cost() + 0.07; // Example additional cost for Background Removal
     }
 
     @Override
-    public double getCost() {
-        return super.getCost() + 0.07; // Example additional cost for Background Removal
+    public void totalCost(double amount) {
+        Logger.getInstance().log("The total cost including Backgroud Removal of image is : "+ amount);
     }
 }

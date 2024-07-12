@@ -8,12 +8,11 @@ public abstract class CostDecorator implements ImageProcessingOperation {
     }
 
     @Override
-    public void execute() {
-        operation.execute();
+    public double cost() {
+        return operation.cost();
     }
-
     @Override
-    public double getCost() {
-        return operation.getCost();
+    public void totalCost(double amount) {
+         operation.totalCost(amount);
     }
 }

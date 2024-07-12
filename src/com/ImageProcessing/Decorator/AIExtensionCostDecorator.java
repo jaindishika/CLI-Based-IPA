@@ -8,14 +8,13 @@ public class AIExtensionCostDecorator extends CostDecorator {
     }
 
     @Override
-    public void execute() {
-        super.execute();
-        Logger.getInstance().log("Additional cost for AI Extension added.");
+    public double cost() {
+        return operation.cost() + 0.10;
     }
 
     @Override
-    public double getCost() {
-        return super.getCost() + 0.10; // Example additional cost for AI Extension
+    public void totalCost(double amount) {
+        Logger.getInstance().log("The total cost including AIExrension of image is : "+ amount);
     }
 }
 

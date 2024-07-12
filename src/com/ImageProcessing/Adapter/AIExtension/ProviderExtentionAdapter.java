@@ -10,7 +10,7 @@ public class ProviderExtentionAdapter implements AIExtensionService {
     }
     @Override
     public void extendImage(String imagePath, String direction, int pixels) {
-        providerExtension.extendImage(imagePath, direction, pixels);
-        Logger.getInstance().log("AI-driven extension using Provider A is completed for imagePath: " + imagePath + ", direction: " + direction + ", pixels: " + pixels);
+        providerExtension.ImplementMethod(imagePath, direction, pixels);
+//        Logger.getInstance().log("AI-driven extension using Provider A is completed for imagePath: " + imagePath + ", direction: " + direction + ", pixels: " + pixels);
     }
 }

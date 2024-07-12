@@ -3,11 +3,12 @@ package com.ImageProcessing.Command;
 import com.ImageProcessing.SingletonPattern.Logger;
 
 public class CropCommand implements Command{
-    private int top;
-    private int right;
-    private int bottom;
-    private int left;
-    private String imagePath;
+    private final int top;
+    private final int right;
+    private final int bottom;
+    private final int left;
+    private final String imagePath;
+    private final OperationCommand command;
 
     public CropCommand(int top, int right, int bottom, int left, String imagePath) {
         this.top = top;
@@ -15,11 +16,11 @@ public class CropCommand implements Command{
         this.bottom = bottom;
         this.left = left;
         this.imagePath = imagePath;
+        this.command = new OperationCommand();
     }
 
     @Override
     public void execute() {
-        Logger.getInstance().log("Crop operation: Top = " + top + ", Right = " + right + ", Bottom = " + bottom + ", Left = " + left + ", ImagePath = " + imagePath);
-        System.out.println("Crop operation completed for Top = " + top + ", Right = " + right + ", Bottom = " + bottom + ", Left = " + left + ", ImagePath = " + imagePath);
+        command.CropPhoto(top, right, bottom, left, imagePath);
     }
 }
