@@ -15,8 +15,5 @@ public class ResizeCommand implements Command{
     @Override
     public void execute() {
         command.ResizePhoto(width, height, imagePath);
-//        double cost = operation.getCost();
-//        Logger.getInstance().log("Total cost for Resize operation: $" + cost);
-//        System.out.println("Total cost for Resize operation: $" + cost);
     }
 }

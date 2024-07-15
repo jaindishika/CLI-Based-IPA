@@ -14,9 +14,9 @@ public abstract class Subject {
         observers.remove(observer);
     }
 
-    protected void notifyObservers(String status) {
+    protected void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(status);
+            observer.update();
         }
     }
 }
